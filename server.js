@@ -13,8 +13,6 @@ app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
-
 mongoose.connect("mongodb://localhost/powerful-cliffs-10887", {
   useNewUrlParser: true,
   useFindAndModify: false
