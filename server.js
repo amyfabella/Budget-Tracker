@@ -7,7 +7,7 @@ const PORT = 3000;
 
 const app = express();
 
-var MONGODB_URI = process.env.MONGODB_URI || "https://powerful-cliffs-10887.herokuapp.com";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://powerful-cliffs-10887";
 
 app.use(logger("dev"));
 
