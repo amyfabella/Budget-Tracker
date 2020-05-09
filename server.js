@@ -19,7 +19,7 @@ app.use(express.static("public"));
 
 mongoose.connect(MONGODB_URI);
 
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/power-cliffs-10887", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
