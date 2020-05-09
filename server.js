@@ -2,7 +2,6 @@ const express = require("express");
 const logger = require("morgan");
 const compression = require("compression");
 const mongoose = require("mongoose");
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/powerful-cliffs-10887";
 
 const PORT = 3000;
 
@@ -16,8 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(MONGODB_URI);
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/powerful-cliffs-10887", {
+mongoose.connect("mongodb://localhost/powerful-cliffs-10887", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
